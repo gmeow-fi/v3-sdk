@@ -1,4 +1,4 @@
-import { Token, CurrencyAmount, WETH9 } from '@uniswap/sdk-core'
+import { Token, CurrencyAmount, WETH9 } from '@gmeowfi/sdk-core'
 import { FeeAmount, TICK_SPACINGS } from '../constants'
 import { nearestUsableTick } from '../utils/nearestUsableTick'
 import { TickMath } from '../utils/tickMath'
@@ -16,7 +16,7 @@ describe('Pool', () => {
   describe('constructor', () => {
     it('cannot be used for tokens on different chains', () => {
       expect(() => {
-        new Pool(USDC, WETH9[3], FeeAmount.MEDIUM, encodeSqrtRatioX96(1, 1), 0, 0, [])
+        new Pool(USDC, WETH9[48899], FeeAmount.MEDIUM, encodeSqrtRatioX96(1, 1), 0, 0, [])
       }).toThrow('CHAIN_IDS')
     })
 

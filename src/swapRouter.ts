@@ -1,5 +1,5 @@
 import { Interface } from '@ethersproject/abi'
-import { BigintIsh, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from '@uniswap/sdk-core'
+import { BigintIsh, Currency, CurrencyAmount, Percent, TradeType, validateAndParseAddress } from '@gmeowfi/sdk-core'
 import invariant from 'tiny-invariant'
 import { Trade } from './entities/trade'
 import { ADDRESS_ZERO } from './constants'
@@ -46,7 +46,7 @@ export interface SwapOptions {
 }
 
 /**
- * Represents the Uniswap V3 SwapRouter, and has static methods for helping execute trades.
+ * Represents the GmeowFi V3 SwapRouter, and has static methods for helping execute trades.
  */
 export abstract class SwapRouter {
   public static INTERFACE: Interface = new Interface(ISwapRouter.abi)
